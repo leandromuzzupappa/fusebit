@@ -1,0 +1,20 @@
+:root {
+  --container: 1120px;
+
+  --orange: #fb310a;
+  --orange-dark: #981d05;
+  --yellow: #ffa700;
+  --green: #15d6cf;
+  --purple: #441b49;
+  --dark: #03032d;
+  --neutral: #a1a1c0;
+  --neutral-light: #f0f7ff;
+  --neutral-dark: #6f6f86;
+  --gray1: #eef6ff;
+  --gray2: #e6f0fe;
+
+  --poppins: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --sora: "Sora", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
