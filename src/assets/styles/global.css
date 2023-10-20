@@ -20,3 +20,26 @@ a {
 ul {
   list-style-type: none;
 }
+
+.container {
+  margin-inline: auto;
+  max-width: var(--container);
+  width: 90%;
+  /* border: 1px solid red; */
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection,
+span::selection,
+a::selection,
+small::selection {
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #ffffff;
+  background: var(--orange);
+}
