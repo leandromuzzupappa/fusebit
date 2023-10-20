@@ -1,3 +1,51 @@
+.hero {
+  --hero-height: 80vh;
+  --hero-text-max-width: 550px;
+}
+
+.hero-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: var(--hero-height);
+}
+
+.hero-headline {
+  color: var(--neutral-light);
+  font-family: var(--sora);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 110%;
+  margin-bottom: 2rem;
+  max-width: var(--hero-text-max-width);
+  position: relative;
+}
+
+.hero-subheadline {
+  background: -webkit-linear-gradient(
+    left,
+    var(--orange) -70%,
+    var(--neutral-light)
+  );
+  color: var(--neutral);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-copy {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 29px;
+  margin-bottom: 3rem;
+  max-width: var(--hero-text-max-width);
+  position: relative;
+}
+
 .hero-background {
   --mask-transition: 0.5s ease-in-out;
 
@@ -6,14 +54,16 @@
   -webkit-mask-size: cover;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-mode: alpha;
-  -webkit-mask-position: left bottom;
+  -webkit-mask-position: 10% bottom;
   mask-image: url("../../assets/images/hero-mask.svg");
   mask-size: cover;
   mask-repeat: no-repeat;
   mask-mode: alpha;
-  mask-position: left bottom;
-  min-height: 85vh;
+  mask-position: 10% bottom;
+  min-height: var(--hero-height);
+  pointer-events: none;
   position: fixed;
+  top: 0;
   transition: mask-position var(--mask-transition),
     -webkit-mask-position var(--mask-transition),
     min-height var(--mask-transition);
@@ -23,9 +73,10 @@
 
 @media screen and (max-width: 768px) {
   .hero-background {
-    -webkit-mask-position: 5%;
-    mask-position: 5%;
-    min-height: 76vh;
+    --hero-height: 95vh;
+
+    -webkit-mask-position: 8%;
+    mask-position: 8%;
   }
 }
 
@@ -44,6 +95,7 @@
   top: 50%;
   translate: -50% -50%;
   z-index: -1;
+  filter: blur(10vmax);
 }
 
 .hero-background .blob1 {
@@ -61,7 +113,7 @@
   top: -5%;
 }
 
-.hero-background .blur {
+.hero-background .blurr {
   backdrop-filter: blur(10vmax);
   height: 100%;
   inset: 0;
