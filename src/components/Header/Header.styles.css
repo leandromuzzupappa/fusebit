@@ -10,12 +10,6 @@
   width: 100%;
 }
 
-.header nav {
-  margin-inline: auto;
-  width: 90%;
-  max-width: var(--container);
-}
-
 .header ul,
 .header ul > div {
   display: flex;
