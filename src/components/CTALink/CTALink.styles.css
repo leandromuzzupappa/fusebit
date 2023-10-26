@@ -1,6 +1,6 @@
 .cta-link {
   --cta-link-font-size: 14px;
-  --cta-link-padding: 0.8rem;
+  --cta-link-padding: 0.8rem 1.5rem;
   --cta-link-border-radius: 2rem;
 
   color: var(--neutral-light);
@@ -37,12 +37,12 @@
 
 .cta-link.small {
   --cta-link-font-size: 12px;
-  --cta-link-padding: 0.5rem;
+  --cta-link-padding: 0.5rem 1rem;
   --cta-link-border-radius: 1.5rem;
 }
 
 .cta-link.large {
   --cta-link-font-size: 18px;
-  --cta-link-padding: 1.5rem;
+  --cta-link-padding: 1.25rem 2.8rem;
   --cta-link-border-radius: 2.5rem;
 }
