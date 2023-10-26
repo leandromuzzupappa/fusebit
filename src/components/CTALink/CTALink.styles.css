@@ -1,0 +1,48 @@
+.cta-link {
+  --cta-link-font-size: 14px;
+  --cta-link-padding: 0.8rem;
+  --cta-link-border-radius: 2rem;
+
+  color: var(--neutral-light);
+  font-size: var(--cta-link-font-size);
+  padding: var(--cta-link-padding);
+  position: relative;
+  width: max-content;
+  z-index: 0;
+}
+
+.cta-link::before {
+  background: var(--orange);
+  border-radius: var(--cta-link-border-radius);
+  content: "";
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.cta-link:hover::before {
+  border-radius: 0.8rem;
+  background: var(--orange-dark);
+}
+
+.cta-link:active::before {
+  background: var(--yellow);
+  transition: none;
+}
+
+.cta-link.small {
+  --cta-link-font-size: 12px;
+  --cta-link-padding: 0.5rem;
+  --cta-link-border-radius: 1.5rem;
+}
+
+.cta-link.large {
+  --cta-link-font-size: 18px;
+  --cta-link-padding: 1.5rem;
+  --cta-link-border-radius: 2.5rem;
+}

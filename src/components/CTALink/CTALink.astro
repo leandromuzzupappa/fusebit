@@ -1,0 +1,18 @@
+---
+import "./CTALink.styles.css";
+
+interface AstroProps {
+  classes?: string;
+  size?: "small" | "medium" | "large";
+  text: string;
+  to?: string;
+}
+
+const { classes, size = "medium", text, to } = Astro.props;
+
+const classList = [classes, size].filter(Boolean).join(" ");
+---
+
+<a class=`cta-link ${classList}` href={to}>
+  {text}
+</a>
