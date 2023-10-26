@@ -33,6 +33,8 @@ import image2 from "../../assets/images/home__img-2.png?url";
 </section>
 
 <script>
+  import { gsap } from "gsap";
+
   const blob = document.querySelector(".blob");
 
   window.onpointermove = (event) => {
@@ -40,15 +42,10 @@ import image2 from "../../assets/images/home__img-2.png?url";
 
     const { clientX, clientY } = event;
 
-    blob.animate(
-      {
-        left: `${clientX}px`,
-        top: `${clientY}px`,
-      },
-      {
-        duration: 3000,
-        fill: "forwards",
-      }
-    );
+    gsap.to(blob, {
+      left: `${clientX}px`,
+      top: `${clientY}px`,
+      duration: 2,
+    });
   };
 </script>
