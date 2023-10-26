@@ -1,5 +1,7 @@
 ---
 import "./Hero.styles.css";
+import image1 from "../../assets/images/home__img-1.png?url";
+import image2 from "../../assets/images/home__img-2.png?url";
 ---
 
 <section class="hero">
@@ -14,11 +16,15 @@ import "./Hero.styles.css";
     </p>
   </div>
 
+  <div class="hero-images">
+    <img src={image1} alt="Fusebit desktop app" />
+    <img src={image2} alt="Fusebit mobile app" />
+  </div>
+
   <div class="hero-background">
     <div class="blob"></div>
     <div class="blob blob1"></div>
     <div class="blob blob2"></div>
-    <div class="blur"></div>
   </div>
 </section>
 

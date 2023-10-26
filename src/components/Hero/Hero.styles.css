@@ -69,6 +69,7 @@
     min-height var(--mask-transition);
   width: 100%;
   z-index: -1;
+  backdrop-filter: blur(20vmax);
 }
 
 @media screen and (max-width: 768px) {
@@ -113,13 +114,35 @@
   top: -5%;
 }
 
-.hero-background .blurr {
-  backdrop-filter: blur(10vmax);
-  height: 100%;
-  inset: 0;
-  position: fixed;
+.hero-images {
+  height: calc(var(--hero-height) - 5vh);
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 18vh;
+  width: 45%;
+}
+
+.hero-images img {
+  left: 0;
+  position: inherit;
+  transform-origin: left top;
+  -webkit-filter: drop-shadow(5px 5px 15px rgb(0 0 0 / 10%));
+  filter: drop-shadow(5px 5px 15px rgb(0 0 0 / 10%));
+}
+
+.hero-images img:nth-child(1) {
+  left: 10%;
   width: 100%;
-  z-index: -1;
+}
+
+.hero-images img:nth-child(2) {
+  top: 150px;
+  width: 35%;
+}
+
+@media screen and (max-width: px) {
 }
 
 @keyframes rotate {
