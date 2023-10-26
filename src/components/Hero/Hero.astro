@@ -35,17 +35,43 @@ import image2 from "../../assets/images/home__img-2.png?url";
 <script>
   import { gsap } from "gsap";
 
-  const blob = document.querySelector(".blob");
+  animateIn();
+  animateBlob();
 
-  window.onpointermove = (event) => {
-    if (!blob) return;
+  function animateBlob() {
+    const blob = document.querySelector(".blob");
 
-    const { clientX, clientY } = event;
+    window.onpointermove = (event) => {
+      if (!blob) return;
 
-    gsap.to(blob, {
-      left: `${clientX}px`,
-      top: `${clientY}px`,
-      duration: 2,
-    });
-  };
+      const { clientX, clientY } = event;
+
+      gsap.to(blob, {
+        left: `${clientX}px`,
+        top: `${clientY}px`,
+        duration: 2,
+      });
+    };
+  }
+
+  function animateIn() {
+    const images = document.querySelectorAll(".hero-images img");
+    const content = document.querySelector(".hero-container");
+
+    const tl = gsap.timeline({ paused: true });
+    const animConfig = {
+      opacity: 0,
+      y: 100,
+      stagger: 0.2,
+      duration: 1,
+    };
+
+    if (content) {
+      tl.from(content?.children, animConfig);
+    }
+
+    tl.from(images, animConfig, "<");
+
+    tl.play();
+  }
 </script>
