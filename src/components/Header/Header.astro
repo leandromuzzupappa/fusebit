@@ -1,4 +1,6 @@
 ---
+import CTALink from "../CTALink/CTALink.astro";
+
 import "./Header.styles.css";
 import logo from "../../assets/images/fusebit__logo.svg?raw";
 
@@ -44,7 +46,11 @@ const headerLinks = [
           <a href="#login" class="header-link">Login</a>
         </li>
         <li>
-          <a href="#signup" class="header-link header-signup">Sign up</a>
+          <CTALink
+            text="Sign up"
+            to="#sign-up"
+            classes="header-link header-signup"
+          />
         </li>
       </div>
 
