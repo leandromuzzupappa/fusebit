@@ -8,6 +8,27 @@
   padding: 2rem 1rem;
   position: fixed;
   width: 100%;
+  z-index: 10;
+}
+
+.header::after {
+  background: var(--dark);
+  content: "";
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  transition: translate 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  translate: 0 -105%;
+  width: 100%;
+  z-index: -1;
+}
+
+.header--filled svg .logo {
+  fill: var(--orange);
+}
+
+.header--filled::after {
+  translate: 0;
 }
 
 .header ul,
@@ -84,6 +105,7 @@
 
 .header-logo path {
   fill: white;
+  transition: fill 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 /* Menu mobile */

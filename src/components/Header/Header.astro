@@ -63,3 +63,22 @@ const headerLinks = [
     </ul>
   </nav>
 </header>
+
+<script>
+  const header = document.querySelector(".header");
+
+  const headerPadding = 30;
+  let prevScrollpos = window.scrollY;
+
+  window.addEventListener("scroll", function () {
+    const currentScrollPos = window.scrollY;
+
+    if (header) {
+      currentScrollPos > 0 + headerPadding
+        ? header.classList.add("header--filled")
+        : header.classList.remove("header--filled");
+    }
+
+    prevScrollpos = currentScrollPos;
+  });
+</script>
