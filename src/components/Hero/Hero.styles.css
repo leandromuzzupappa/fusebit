@@ -62,7 +62,7 @@
   mask-position: 10% bottom;
   min-height: var(--hero-height);
   pointer-events: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   transition: mask-position var(--mask-transition),
     -webkit-mask-position var(--mask-transition),
