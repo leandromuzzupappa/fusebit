@@ -1,0 +1,64 @@
+---
+interface Props {
+  classList?: string;
+  theme?: "light" | "dark";
+}
+
+const { classList = "", theme = "light" } = Astro.props;
+---
+
+<div class=`titleAndContent ${classList}` data-theme={theme}>
+  <slot name="title" />
+  <slot name="content" />
+</div>
+
+<style is:inline>
+  .titleAndContent h2 {
+    font-size: 48px;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 57.6px;
+    line-height: clamp(1.8rem, 5.5vw, 3.6rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .titleAndContent h2 span {
+    color: var(--orange);
+    display: block;
+  }
+
+  .titleAndContent h2 i {
+    animation: caret 0.6s infinite;
+    font-style: normal;
+    transition: none;
+  }
+
+  .titleAndContent p {
+    font-size: 18px;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    font-weight: 300;
+    line-height: 28.8px;
+    position: relative;
+  }
+
+  .titleAndContent[data-theme="dark"] h2 {
+    color: var(--neutral-light);
+  }
+
+  .titleAndContent[data-theme="dark"] p {
+    color: var(--neutral-dark);
+  }
+
+  @keyframes caret {
+    from,
+    to {
+      opacity: 0;
+    }
+
+    33%,
+    66% {
+      opacity: 1;
+    }
+  }
+</style>
