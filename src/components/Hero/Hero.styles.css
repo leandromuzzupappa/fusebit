@@ -1,4 +1,4 @@
-.hero {
+.hero-section {
   --hero-height: 80vh;
   --hero-text-max-width: 550px;
 }
@@ -23,11 +23,9 @@
 }
 
 .hero-subheadline {
-  background: -webkit-linear-gradient(
-    left,
-    var(--orange) -70%,
-    var(--neutral-light)
-  );
+  background: -webkit-linear-gradient(left,
+      var(--orange) -70%,
+      var(--neutral-light));
   color: var(--neutral);
   font-weight: 700;
   font-size: 16px;
@@ -61,6 +59,7 @@
   mask-mode: alpha;
   mask-position: 10% bottom;
   min-height: var(--hero-height);
+  overflow: hidden;
   pointer-events: none;
   position: absolute;
   top: 0;
@@ -193,6 +192,7 @@
 }
 
 @media screen and (width: 768px) and (height: 1024px) {
+
   .hero,
   .hero-background {
     --hero-height: 65vh;
