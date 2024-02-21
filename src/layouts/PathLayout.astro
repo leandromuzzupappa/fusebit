@@ -1,0 +1,32 @@
+---
+const { pathId } = Astro.props;
+---
+
+<div class="path-wrapper" data-path={pathId}>
+  <slot />
+</div>
+
+<style is:global>
+  .path-wrapper {
+    --padding-inline: clamp(0px, 10vw, 300px);
+
+    align-items: flex-start;
+    display: grid;
+    grid-template-columns:
+      [start] minmax(var(--padding-inline), 1fr)
+      [content-start] min(100% - var(--padding-inline), var(--container))
+      [content-end] minmax(var(--padding-inline), 1fr)
+      [end];
+    margin-top: 20vh;
+    position: relative;
+  }
+  .path-wrapper .path {
+    grid-column: content;
+    left: -14px;
+    position: absolute;
+  }
+
+  .path-wrapper .path svg {
+    width: 100%;
+  }
+</style>

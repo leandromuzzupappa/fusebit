@@ -24,8 +24,7 @@ ul {
 .container {
   margin-inline: auto;
   max-width: var(--container);
-  width: 90%;
-  /* border: 1px solid red; */
+  width: 89%;
 }
 
 h1::selection,
