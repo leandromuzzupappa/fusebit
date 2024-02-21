@@ -1,0 +1,34 @@
+---
+import Section from "@layouts/Section.astro";
+import TitleAndContent from "@components/TitleAndContent/TitleAndContent.astro";
+---
+
+<Section name="support">
+  <div class="container">
+    <TitleAndContent classList="content">
+      <h2 slot="title">
+        Spend
+        <span>less time learning</span>
+        and more time coding<i>_</i>
+      </h2>
+      <p slot="content">
+        Fusebit supports popular SaaS APIs so you don’t have to become an
+        integration expert. Our simple, uniform model covers all your
+        integration needs in one place.
+      </p>
+    </TitleAndContent>
+  </div>
+</Section>
+
+<style is:inline>
+  .support-section {
+    grid-column: content;
+    height: 120vh;
+    /* margin-top: 20vh; */
+  }
+
+  .support-section .content {
+    width: 100%;
+    max-width: clamp(300px, 100%, 575px);
+  }
+</style>

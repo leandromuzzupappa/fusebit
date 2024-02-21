@@ -1,15 +1,22 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header/Header.astro";
-import Hero from "../components/Hero/Hero.astro";
-import "../assets/styles/global.css";
+import Layout from "@layouts/Layout.astro";
+import PathLayout from "@layouts/PathLayout.astro";
+import Header from "@components/Header/Header.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Support from "@components/Support/Support.astro";
+import "@assets/styles/global.css";
+import img from "@assets/images/line-path-1.svg?raw";
 ---
 
 <Layout title="Fusebit">
   <Header />
   <main>
     <Hero />
+    <PathLayout>
+      <span class="path">
+        <Fragment set:html={img} />
+      </span>
+      <Support />
+    </PathLayout>
   </main>
 </Layout>
-
-<style></style>
